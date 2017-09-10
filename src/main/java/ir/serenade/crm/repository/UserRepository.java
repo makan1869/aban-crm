@@ -1,0 +1,8 @@
+package ir.serenade.crm.repository;
+
+import ir.serenade.crm.domain.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserRepository extends JpaRepository<User, Long> {
+    User findByUsername(String username);
+}
